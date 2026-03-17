@@ -1,27 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Company Directory</title>
-        <link rel="stylesheet" href="./index.css">
-        <script src="./index.js" type="module"></script>
-    </head>
-    <body>
-        <header>
-            <h1>Our Company</h1>
-        </header>
+<head>
+    <meta charset="UTF-8">
+    <title>Company Directory</title>
+    <link rel="stylesheet" href="./index.css">
+    <script src="./index.js" type="module"></script>
+</head>
+<body>
+    <header>
+        <h1>Our Company</h1>
+    </header>
 
-        <main id="employee-container">
-            <template id="employee-template">
-                <div class="employee-card">
-                    <img class="employee-pic" src="https://placehold.co/32x32/000000/FFFFFF/png" alt="profile picture">
-                    
-                    <div class="employee-details">
-                        <h3 class="employee-name">{{employee-name}}</h3>
-                        <p class="employee-role">{{employee-role}}</p>
-                    </div>
-                </div>
-            </template>
-        </main>
-    </body>
+    <main id="employee-container">
+        <template id="employee-template">
+    <div class="employee-card">
+        <img class="employee-pic" src="https://placehold.co/32x32/000000/FFFFFF/png" alt="profile picture">
+        <h2 class="employee-name">{{employee-name}}</h2>
+        <p class="employee-role">{{employee-role}}</p>
+    </div>
+</template>
+    </main>
+</body>
 </html>

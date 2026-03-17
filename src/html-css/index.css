@@ -1,49 +1,45 @@
-/* A konténer elrendezése (hogy egymás mellett legyenek a kártyák) */
+html { font-size: 10px; } 
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
 #employee-container {
     display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    padding: 20px;
-    justify-content: center;
-}
-
-/* A kártya stílusa */
-.employee-card {
-    border: 1px solid #d1d1d1;
-    border-radius: 8px;
-    padding: 15px;
-    width: 300px;
-    display: flex;
-    align-items: center; /* Kép és szöveg egy vonalba kerül */
-    background-color: #ffffff;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-/* A profilkép stílusa */
-.employee-pic {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%; /* Kör alakú kép */
-    margin-right: 15px;
-    object-fit: cover;
-}
-
-/* Szövegek formázása */
-.employee-details {
-    display: flex;
-    vertical-align: middle;
     flex-direction: column;
+    gap: 10px;
+    width: 350px; 
+}
+
+.employee-card {
+    border: 1px solid #767676;
+    border-radius: 4px;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 50px 1fr; 
+    grid-template-rows: auto auto;
+    align-items: center;
+}
+
+.employee-pic {
+    grid-row: 1 / span 2; 
+    width: 32px;
+    height: 32px;
+    background-color: #000;
 }
 
 .employee-name {
     margin: 0;
-    font-size: 1.6rem; /* Mivel a html { font-size: 10px; }, ez 16px lesz */
-    color: #333;
+    font-size: 1.6rem;
     font-weight: bold;
 }
 
 .employee-role {
-    margin: 2px 0 0 0;
-    font-size: 1.2rem; /* 12px */
-    color: #666;
+    margin: 0;
+    font-size: 1.4rem;
+    color: #333;
 }
