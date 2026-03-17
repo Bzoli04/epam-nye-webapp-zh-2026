@@ -6,22 +6,17 @@ export const employees = [
     { id: 5, name: "Dávid", role: "Developer", salary: 850000 }
 ];
 
-
 export function getHighEarners(staff, limit) {
     return staff
         .filter(emp => emp.salary > limit)
         .map(emp => emp.name);
 }
 
-
 export function applyDevBonus(staff) {
-    
     return staff.map(emp => {
         if (emp.role === "Developer") {
-            return { 
-                ...emp, 
-                salary: Math.round(emp.salary * 1.1) 
-            };
+            
+            return { ...emp, salary: Math.round(emp.salary * 1.1) };
         }
         
         return { ...emp };
